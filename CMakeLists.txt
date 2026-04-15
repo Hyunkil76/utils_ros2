@@ -36,6 +36,7 @@ include_directories(
 add_library(${PROJECT_NAME}
   src/Utils.cpp
   src/Trajectory.cpp
+  src/Extract_extra_frame.cpp
 )
 
 ament_target_dependencies(${PROJECT_NAME}

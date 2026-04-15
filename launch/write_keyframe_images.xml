@@ -11,6 +11,10 @@
   <arg name="compressed" default="true"/>
   <arg name="skip_first_line" default="true"/>
 
+  <arg name="prefer_left_on_extract_center" default="true"/>
+  <arg name="num_extra" default="0" description="Number of extra frames to extract"/>
+  <arg name="make_sub_dir" default="true" description="Whether to create subdirectories for extra frames; folders will be named after the previous keyframe."/>
+
   <!-- Node definition -->
   <node pkg="utils_ros2"
         exec="write_kf_images"
@@ -26,6 +30,10 @@
     <param name="scale" value="$(var scale)"/>
     <param name="compressed" value="$(var compressed)"/>
     <param name="skip_first_line" value="$(var skip_first_line)"/>
+
+    <param name="prefer_left_on_extract_center" value="$(var prefer_left_on_extract_center)"/>
+    <param name="num_extra" value="$(var num_extra)"/>
+    <param name="make_sub_dir" value="$(var make_sub_dir)"/>
 
   </node>
 </launch>

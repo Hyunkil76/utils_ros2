@@ -22,7 +22,7 @@ source ~/utils_ros2_ws/install/setup.bash # Or add this to ~/.bashrc to make it 
 #### Extract Keyframes
 To extract keyframes from a ros2bag, run the following command:
 ```bash
-ros2 launch utils_ros2 write_keyframe_images.xml bag_file:=bag_file image_dir:=dir_to_save_images traj_file:=VIO_trajectory_file config_file:=camera config file
+ros2 launch utils_ros2 write_keyframe_images.xml bag_file:=bag_file image_dir:=dir_to_save_images traj_file:=VIO_trajectory_file.txt config_file:=camera_config_file.yaml num_extra:=number_extra_frame
 ```
 
 Note: By default, the keyframes are undistorted. The reason being COLMAP undistortion changes image size in an effort to maximize information from images.
